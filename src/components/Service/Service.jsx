@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import PropTypes from 'prop-types';
 
 export default function Services() {
 
@@ -48,13 +49,22 @@ export default function Services() {
     )
   }
 
+  ServiceCard.propTypes = {
+    service: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      icon: PropTypes.string.isRequired,
+    }).isRequired,
+  };
+
   return (
     <div className="bg-gray-50">
       <main className="container mx-auto px-4 pt-28">
         <section className="mb-16">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h1>
           <p className="text-lg md:text-xl text-gray-600 mb-6">
-            We offer a comprehensive range of digital solutions to help your business thrive in the online world. From web design to SEO, we've got you covered.
+            We offer a comprehensive range of digital solutions to help your business thrive in the online world. From web design to SEO, we have got you covered.
           </p>
         </section>
 
@@ -120,4 +130,6 @@ export default function Services() {
     </div>
   )
 }
+
+
 

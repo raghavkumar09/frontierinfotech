@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -10,35 +10,61 @@ const Footer = () => {
             <ul className="text-gray-600">
               <li className="mb-2">
                 <i className="fas fa-envelope mr-2"></i>
-                <span>info@yourdomain.com</span> {/* Replace with your email */}
+                <span>info@frontierinfotech.com</span>
               </li>
               <li>
                 <i className="fas fa-globe mr-2"></i>
-                <span>www.yourwebsite.com</span> {/* Replace with your website */}
+                <span>www.frontierinfotech.com</span>
               </li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-medium mb-4">Our Services</h3>
             <ul className="text-gray-600">
-              <li className="mb-2">Graphic Design</li>
-              <li className="mb-2">Website Design</li>
-              <li className="mb-2">Digital Marketing</li>
-              <li className="mb-2">E-Commerce Development</li>
-              <li className="mb-2">Mobile App Development</li>
-              <li className="mb-2">Web Development</li>
-              <li className="mb-2">Software Development</li>
-              <li>SaaS Development</li>
+              <li className="mb-2">
+                <Link to="/service/graphic-design">Graphic Design</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/service/website-design">Website Design</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/service/digital-marketing">Digital Marketing</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/service/e-commerce-development">E-Commerce Development</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/service/mobile-app-development">Mobile App Development</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/service/web-development">Web Development</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/service/software-development">Software Development</Link>
+              </li>
+              <li>
+                <Link to="/service/saas-development">SaaS Development</Link>
+              </li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-medium mb-4">Resources</h3>
             <ul className="text-gray-600">
-              <li className="mb-2">About Us</li>
-              <li className="mb-2">Contact Us</li>
-              <li className="mb-2">Privacy Policy</li>
-              <li className="mb-2">Refund Policy</li>
-              <li>Terms & Conditions</li>
+              <li className="mb-2">
+                <Link to="/about">About Us</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/contact">Contact Us</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/privacy-policy">Privacy Policy</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/refund-policy">Refund Policy</Link>
+              </li>
+              <li>
+                <Link to="/terms-conditions">Terms & Conditions</Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -59,7 +85,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center mt-12 text-gray-500">
-          © 2024 AOA Software Solution Pvt. Ltd.
+          © 2025 Frontierinfotech Software Solutions | All rights reserved.
         </div>
       </div>
     </footer>
