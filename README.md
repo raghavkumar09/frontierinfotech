@@ -70,9 +70,6 @@ We welcome contributions! If you have any ideas, suggestions, or bug reports, fe
    ```
 5. Create a pull request.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
 ## Contact Us
 Have any questions or need assistance? Reach out to us:
 - **Email**: support@frontierinfotech.com
