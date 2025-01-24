@@ -22,28 +22,28 @@ const Footer = () => {
             <h3 className="text-lg font-medium mb-4">Our Services</h3>
             <ul className="text-gray-600">
               <li className="mb-2">
-                <Link to="/service/graphic-design">Graphic Design</Link>
+                <Link to="#">Graphic Design</Link>
               </li>
               <li className="mb-2">
-                <Link to="/service/website-design">Website Design</Link>
+                <Link to="#">Website Design</Link>
               </li>
               <li className="mb-2">
-                <Link to="/service/digital-marketing">Digital Marketing</Link>
+                <Link to="#">Digital Marketing</Link>
               </li>
               <li className="mb-2">
-                <Link to="/service/e-commerce-development">E-Commerce Development</Link>
+                <Link to="#">E-Commerce Development</Link>
               </li>
               <li className="mb-2">
-                <Link to="/service/mobile-app-development">Mobile App Development</Link>
+                <Link to="#">Mobile App Development</Link>
               </li>
               <li className="mb-2">
-                <Link to="/service/web-development">Web Development</Link>
+                <Link to="#">Web Development</Link>
               </li>
               <li className="mb-2">
-                <Link to="/service/software-development">Software Development</Link>
+                <Link to="#">Software Development</Link>
               </li>
               <li>
-                <Link to="/service/saas-development">SaaS Development</Link>
+                <Link to="#">SaaS Development</Link>
               </li>
             </ul>
           </div>
@@ -57,13 +57,13 @@ const Footer = () => {
                 <Link to="/contact">Contact Us</Link>
               </li>
               <li className="mb-2">
-                <Link to="/privacy-policy">Privacy Policy</Link>
+                <Link to="#">Privacy Policy</Link>
               </li>
               <li className="mb-2">
-                <Link to="/refund-policy">Refund Policy</Link>
+                <Link to="#">Refund Policy</Link>
               </li>
               <li>
-                <Link to="/terms-conditions">Terms & Conditions</Link>
+                <Link to="#">Terms & Conditions</Link>
               </li>
             </ul>
           </div>
