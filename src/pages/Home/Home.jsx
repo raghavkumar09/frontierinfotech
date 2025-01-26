@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import HeroAnimation from "../../components/HeroAnimation"
-
+import { Monitor, Code, TrendingUp } from "lucide-react";
 export default function Home() {
   const [currentPhrase, setCurrentPhrase] = useState(0)
   const phrases = ["Innovate", "Create", "Transform", "Elevate", "Inspire"]
@@ -22,11 +21,11 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-gradient-to-r from-[#141e30] to-[#243b55] text-white">
+    <div className="bg-gradient-to-r from-[#780206] to-[#061161] text-white">
       <main className="relative pt-20">
         <section className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
           <div className="absolute inset-0 opacity-30">
-            <HeroAnimation />
+            {/* <HeroAnimation /> */}
           </div>
           <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 mt-16">
             <motion.h1
@@ -57,15 +56,15 @@ export default function Home() {
             >
               <a
                 href="/service"
-                className="bg-white text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-90 transition duration-300 hover:shadow-lg transform hover:-translate-y-1"
+                className="bg-white text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-90 hover:shadow-[0px_0px_10px_2px] hover:shadow-white group transition duration-300 transform hover:-translate-y-1"
               >
                 Explore Our Services
               </a>
             </motion.div>
           </div>
         </section>
-        <hr />
-        <section className="py-20 sm:py-32 bg-gradient-to-b from-white to-purple-50 text-gray-800">
+        <hr/>
+        <section className="py-20 sm:py-32 bg-gradient-to-b from-white to-purple-100 text-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.h2
               className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gray-900 md:pb-9"
@@ -93,18 +92,21 @@ export default function Home() {
                   description:
                     "We craft visually stunning and user-centric experiences that captivate your audience and drive engagement.",
                   gradient: "from-purple-400 to-pink-500",
+                  Icon: Monitor, // Use Monitor icon here
                 },
                 {
                   title: "Robust Development",
                   description:
                     "Our team builds scalable and high-performance digital solutions that stand the test of time and grow with your business.",
                   gradient: "from-blue-400 to-indigo-500",
+                  Icon: Code, // Example icon for this section
                 },
                 {
                   title: "Strategic Marketing",
                   description:
                     "We drive growth through data-driven digital strategies, helping you reach and convert your target audience effectively.",
                   gradient: "from-green-400 to-cyan-500",
+                  Icon: TrendingUp, // Example icon for this section
                 },
               ].map((service, index) => (
                 <motion.div
@@ -117,7 +119,11 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-10`}></div>
-                  <h3 className="text-xl font-bold mb-2 relative z-10">{service.title}</h3>
+                  
+                  <div className=" flex items-center gap-4 mb-4">
+                    <service.Icon className="text-3xl text-white" />
+                    <h3 className="text-xl font-bold mb-2 relative z-10">{service.title}</h3>
+                  </div>
                   <p className="relative z-10">{service.description}</p>
                 </motion.div>
               ))}
@@ -125,7 +131,8 @@ export default function Home() {
           </div>
         </section>
         <hr />
-        <section className="py-20 sm:py-32 bg-gradient-to-b from-purple-50 to-white text-gray-800">
+
+        <section className="py-20 sm:py-32 bg-gradient-to-b from-purple-100 to-white text-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.h2
               className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gray-900 pb-4"
@@ -178,7 +185,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 sm:py-32 bg-gradient-to-r from-[#292E49] to-[#536976] text-white">
+        <section className="py-20 sm:py-32 bg-gradient-to-r from-[#780206] to-[#061161] text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.h2
               className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8"
@@ -201,7 +208,7 @@ export default function Home() {
             </motion.p>
             <motion.a
               href="/contact"
-              className="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-90 transition duration-300 hover:shadow-lg transform hover:-translate-y-1"
+              className="bg-white text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-90 hover:shadow-[0px_0px_10px_2px] hover:shadow-white group transition duration-300 transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -214,7 +221,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 sm:py-32 bg-gradient-to-b from-white to-purple-50 text-gray-800">
+        <section className="py-20 sm:py-32 bg-gradient-to-b from-white to-purple-100 text-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.h2
               className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gray-900 md:pb-4"
@@ -232,28 +239,32 @@ export default function Home() {
                   role: "CEO, TechStart",
                   quote:
                     "Working with this team has been a game-changer for our business. They delivered beyond our expectations!",
+                  gradient: "from-purple-400 to-pink-500",
                 },
                 {
                   name: "Michael Chen",
                   role: "Marketing Director, GrowthCo",
                   quote: "Their innovative approach and attention to detail set them apart. Highly recommended!",
+                  gradient: "from-blue-500 to-indigo-600",
                 },
                 {
                   name: "Emily Rodriguez",
                   role: "Founder, EcoSolutions",
                   quote:
                     "From concept to execution, they've been an invaluable partner in our digital transformation journey.",
+                  gradient: "from-green-400 to-lime-500",
                 },
               ].map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  className="bg-gray-900 text-white p-6 rounded-lg shadow-md"
+                  className="p-6 rounded-lg shadow-lg overflow-hidden relative bg-gray-900 text-white"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.03 }}
                 >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.gradient} opacity-10`}></div>
                   <p className="mb-4 italic">&quot;{testimonial.quote}&quot;</p>
                   <p className="font-bold">{testimonial.name}</p>
                   <p className="text-sm text-gray-400">{testimonial.role}</p>
