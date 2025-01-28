@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Monitor, Code, TrendingUp } from "lucide-react";
-export default function Home() {
+export default function Home() {                   
   const [currentPhrase, setCurrentPhrase] = useState(0)
   const phrases = ["Innovate", "Create", "Transform", "Elevate", "Inspire"]
 

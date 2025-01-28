@@ -28,23 +28,23 @@ export default function Services() {
 
   const ServiceCard = ({ service }) => {
     return (
-      <motion.div 
-        className="bg-white rounded-lg shadow-lg p-6 cursor-pointer"
-        whileHover={{ 
-          scale: 1.05, 
+      <motion.div
+        className="bg-gray-900 text-white rounded-lg shadow-lg p-6 cursor-pointer"
+        whileHover={{
+          scale: 1.05,
           boxShadow: "0 10px 20px rgba(0,0,0,0.2)",
         }}
         transition={{ duration: 0.3 }}
       >
-        <motion.div 
+        <motion.div
           className="text-4xl mb-4"
           whileHover={{ rotate: [0, -10, 10, -10, 0] }}
           transition={{ duration: 0.5 }}
         >
           {service.icon}
         </motion.div>
-        <h3 className="text-xl font-bold text-gray-800 mb-2">{service.name}</h3>
-        <p className="text-gray-600">{service.description}</p>
+        <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+        <p className="text-white">{service.description}</p>
       </motion.div>
     )
   }
@@ -60,12 +60,24 @@ export default function Services() {
 
   return (
     <div className="bg-gray-50">
-      <main className="container mx-auto px-4 pt-28">
+      <main className="container mx-auto px-4 pt-20">
         <section className="mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Services</h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-6">
+          <motion.h1
+            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 mt-12 "
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Our Services
+          </motion.h1>
+          <motion.p
+            className="text-lg md:text-xl text-gray-600 mb-6"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             We offer a comprehensive range of digital solutions to help your business thrive in the online world. From web design to SEO, we have got you covered.
-          </p>
+          </motion.p>
         </section>
 
         <section className="mb-20">
@@ -80,6 +92,7 @@ export default function Services() {
               >
                 <ServiceCard service={service} />
               </motion.div>
+              
             ))}
           </div>
         </section>

@@ -1,6 +1,5 @@
-'use client'
-
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -27,14 +26,25 @@ export default function ContactUs() {
 
   return (
     <div className="bg-gray-50">
-      <main className="container mx-auto px-4 pt-28">
+      <main className="container mx-auto px-4 pt-20">
         <section className="mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-6">
+          <motion.h1
+            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 mt-12 "
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Contact Us
+          </motion.h1>
+          <motion.p
+            className="text-lg md:text-xl text-gray-600 mb-6"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             We love to hear from you! Get in touch with us for any questions or feedback.
-          </p>
+          </motion.p>
         </section>
-
         <section className="grid md:grid-cols-2 gap-8 mb-16">
           <div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Send us a message</h2>
