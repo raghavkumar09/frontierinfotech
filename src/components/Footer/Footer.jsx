@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-[#780206] to-[#061161] text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Us Section */}
           <div>
             <h3 className="text-lg font-medium mb-4">Contact Us</h3>
@@ -74,23 +74,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter Section */}
-          <div>
-            <h3 className="text-lg font-medium mb-4">Subscribe to Our Newsletter!</h3>
-            <p className="text-white opacity-75 mb-4">
-              Take advantage of exclusive deals and insightful content straight to your inbox!
-            </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="border border-gray-300 px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-black shadow-md"
-              />
-              <button className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded-r-md">
-                Submit
-              </button>
-            </div>
-          </div>
+          
         </div>
 
         {/* Footer Bottom Section */}

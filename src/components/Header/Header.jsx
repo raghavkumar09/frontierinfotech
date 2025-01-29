@@ -14,21 +14,20 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full">
-        <div className="absolute inset-0 bg-gray-900  shadow-md"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#780206]/80 to-[#061161]/80 backdrop-blur-md shadow-md"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex items-center justify-between h-20">
-            <NavLink href="/" className="text-white text-xl font-bold">
+            <NavLink href="/" className="text-white text-xl font-bold hover:shadow-white group transition duration-300 transform hover:scale-105 ">
               FRONTIER INFOTECH
             </NavLink>
-
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-white hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                className="text-white  cursor-pointer"
               >
                 <svg
-                  className="h-6 w-6"
+                  className="h-6 w-6 fill-current"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -97,42 +96,42 @@ export default function Header() {
 
         {/* Mobile Menu Sliding from the Right */}
         <div
-          className={`fixed inset-y-0 right-0 z-20 w-full bg-white transform ${isOpen ? "translate-x-0" : "translate-x-full"
-            } transition-transform duration-300 ease-in-out md:hidden position-fixed top-[65px]`}
+          className={`fixed inset-y-0 top-20 right-0 z-20 w-full bg-white h-screen   transform ${isOpen ? "translate-x-0" : "translate-x-full"
+            } transition-transform duration-300 ease-in-out md:hidden position-fixed top-[65px] shadow-md`}
         >
-          <div className="flex flex-col h-full p-6 space-y-4">
+          <div className="flex flex-col h-full p-6 space-y-2">
             {/* Navigation NavLinks */}
             <NavLink
               to="/"
-              className="text-lg font-medium text-gray-800 hover:text-gray-900"
+              className="text-lg font-medium text-gray-800 hover:shadow-white hover:bg-gray-900 hover:text-white group transition duration-300 transform hover:scale-105 rounded-md p-2"
               onClick={handleLinkClick}
             >
               Home
             </NavLink>
             <NavLink
               to="/about"
-              className="text-lg font-medium text-gray-800 hover:text-gray-900"
+              className="text-lg font-medium text-gray-800 hover:shadow-white hover:bg-gray-900 hover:text-white group transition duration-300 transform hover:scale-105 rounded-md p-2"
               onClick={handleLinkClick}
             >
               About Us
             </NavLink>
             <NavLink
               to="/service"
-              className="text-lg font-medium text-gray-800 hover:text-gray-900"
+              className="text-lg font-medium text-gray-800 hover:shadow-white hover:bg-gray-900 hover:text-white group transition duration-300 transform hover:scale-105 rounded-md p-2"
               onClick={handleLinkClick}
             >
               Services
             </NavLink>
             <NavLink
               to="/contact"
-              className="text-lg font-medium text-gray-800 hover:text-gray-900"
+              className="text-lg font-medium text-gray-800 hover:shadow-white hover:bg-gray-900 hover:text-white group transition duration-300 transform hover:scale-105 rounded-md p-2"
               onClick={handleLinkClick}
             >
               Contact Us
             </NavLink>
             <NavLink
               to="/blogs"
-              className="text-lg font-medium text-gray-800 hover:text-gray-900"
+              className="text-lg font-medium text-gray-800 hover:shadow-white hover:bg-gray-900 hover:text-white group transition duration-300 transform hover:scale-105 rounded-md p-2"
               onClick={handleLinkClick}
             >
               Blogs

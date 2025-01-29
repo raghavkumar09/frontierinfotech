@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Monitor, Code, TrendingUp } from "lucide-react";
-export default function Home() {                   
+export default function Home() {
   const [currentPhrase, setCurrentPhrase] = useState(0)
   const phrases = ["Innovate", "Create", "Transform", "Elevate", "Inspire"]
 
@@ -23,10 +23,7 @@ export default function Home() {
   return (
     <div className="bg-gradient-to-r from-[#780206] to-[#061161] text-white">
       <main className="relative pt-20">
-        <section className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-30">
-            {/* <HeroAnimation /> */}
-          </div>
+        <section className="min-h-[90vh] md:min-h-[95vh] flex flex-col justify-center items-center relative overflow-hidden">
           <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 mt-16">
             <motion.h1
               className="text-5xl sm:text-7xl md:text-8xl font-bold mb-6"
@@ -63,7 +60,7 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-        <hr/>
+        <hr />
         <section className="py-20 sm:py-32 bg-gradient-to-b from-white to-purple-100 text-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.h2
@@ -119,7 +116,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-10`}></div>
-                  
+
                   <div className=" flex items-center gap-4 mb-4">
                     <service.Icon className="text-3xl text-white" />
                     <h3 className="text-xl font-bold mb-2 relative z-10">{service.title}</h3>
@@ -270,6 +267,26 @@ export default function Home() {
                   <p className="text-sm text-gray-400">{testimonial.role}</p>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section className="py-20 sm:py-32 bg-gradient-to-b from-white to-purple-100 text-gray-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.h2
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gray-900 md:pb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Subscribe to Our Newsletter!
+            </motion.h2>
+            <div className="flex flex-col items-center justify-center space-x-4">
+              <input className="w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" placeholder="Enter your email" />
+              <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-1 mt-4">
+                Subscribe
+              </button>
             </div>
           </div>
         </section>
